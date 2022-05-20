@@ -23,7 +23,14 @@ func main() {
 			ZipCode: 9771220,
 		},
 	}
+	pPointer := &p
 	p.print()
+	pPointer.updateName("Tatinha")
+	p.print()
+}
+
+func (p *person) updateName(fName string) {
+	p.FirstName = fName
 }
 
 func (p person) print() {
