@@ -23,13 +23,19 @@ func main() {
 			ZipCode: 9771220,
 		},
 	}
-	p.updateName("Tatinha")
+	p.updateName("Joao")
+	p.updateEmail("joao@gmail.com")
+
 	p.print()
 
 }
 
 func (p *person) updateName(fName string) {
 	(*p).FirstName = fName
+}
+
+func (p *person) updateEmail(e string) {
+	(*p).Email = e
 }
 
 func (p person) print() {
