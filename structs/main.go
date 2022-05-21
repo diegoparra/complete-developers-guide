@@ -23,14 +23,13 @@ func main() {
 			ZipCode: 9771220,
 		},
 	}
-	pPointer := &p
+	p.updateName("Tatinha")
 	p.print()
-	pPointer.updateName("Tatinha")
-	p.print()
+
 }
 
 func (p *person) updateName(fName string) {
-	p.FirstName = fName
+	(*p).FirstName = fName
 }
 
 func (p person) print() {
